@@ -6,7 +6,17 @@
 *.swp
 .buildlog/
 .history
+.DS_STORE
+.atom/
+.build/
+.svn/
+.swiftpm/
+migrate_working_dir/
 
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
 
 
 # Flutter repo-specific
@@ -39,6 +49,7 @@ analysis_benchmark.json
 **/generated_plugin_registrant.dart
 .packages
 .pub-preload-cache/
+pub-cache/
 .pub/
 build/
 flutter_*.png
@@ -110,6 +121,9 @@ coverage/
 # Symbols
 app.*.symbols
 
+# Obfuscation related
+app.*.map.json
+
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
@@ -117,3 +131,11 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Widget Preview related
+.widget_preview/
