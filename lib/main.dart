@@ -29,7 +29,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  CustomFilePicker filePicker = CustomFilePicker();
+  var filePicker = CustomFilePicker();
 
   String fileName = '';
 

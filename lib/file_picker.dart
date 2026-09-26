@@ -1,16 +1,14 @@
 import 'package:flutter/services.dart';
+import 'package:listen_together/constants.dart';
 
 class CustomFilePicker {
   CustomFilePicker();
 
-  final MethodChannel channel = MethodChannel(
-    'com.listen_together.app/customfilepicker',
-
-  );
+  final _channel = MethodChannel(filePickerChannelName);
 
   Future<String?> pickFile() async {
     try {
-      final String? result = await channel.invokeMethod<String>('pickFile');
+      final String? result = await _channel.invokeMethod<String>('pickFile');
       return result;
     } on PlatformException {
       return null;
